@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 200px;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  padding: 17px 0 13px 0;
+  box-shadow: 0px 2px 2px 1px lightgray;
+  position: relative;
+}
+#logo {
+  width: 190px;
+  justify-content: center;
+  margin: auto;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 12px 0 12px 15px;
+}
+
+.input_icon {
+  font-size: 15px;
+  padding: 8px 10px;
+}
+.input_location {
+  width: 153px;
+  line-height: 35px;
+  font-weight: 700;
+  border: none;
+  background-color: #f3f3f3;
+  font-size: 18px;
+  font-family: "Roboto";
+  padding-left: 8px;
+}
+
+.input_location::placeholder {
+  color: rgba(0, 0, 0, 0.631);
+  font: inherit;
+}
+
+.intro {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 25px 10px 65px 10px;
+}
+
+.intro-title {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.intro-subtitle {
+  font-weight: 300;
+  padding-bottom: 25px;
+}
+
+.intro_btn {
+  border-radius: 30px;
+  background-color: #ff79da;
+  border-color: #ff79da;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
