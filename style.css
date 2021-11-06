@@ -22,7 +22,7 @@ header {
   justify-content: center;
   margin: auto;
 }
-
+/* SECTION INPUT */
 .input {
   display: flex;
   justify-content: center;
@@ -46,6 +46,7 @@ header {
   padding-left: 8px;
 }
 
+/* SECTION INTRO */
 .input_location::placeholder {
   color: rgba(0, 0, 0, 0.631);
   font: inherit;
@@ -69,8 +70,12 @@ header {
 
 .intro_btn {
   border-radius: 30px;
-  background-color: #ff79da;
-  border-color: #ff79da;
+  background-image: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 0.9),
+    rgba(255, 121, 218, 0.9)
+  );
+  box-shadow: 0px 2px 2px 2px lightgray;
   cursor: pointer;
   font-size: 18px;
   font-weight: 400;

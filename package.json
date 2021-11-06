@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charlotte-Lem/CharlotteLemoine_3_05112021.git"
+  },
+  "author": "Charlotte Lemoine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charlotte-Lem/CharlotteLemoine_3_05112021/issues"
+  },
+  "homepage": "https://github.com/Charlotte-Lem/CharlotteLemoine_3_05112021#readme",
+  "devDependencies": {
+    "sass": "^1.43.4"
+  }
+}
