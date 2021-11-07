@@ -1,18 +1,27 @@
 .restaurants {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
+  background-color: $color-grey;
   h2 {
     margin: 20px;
   }
-  &__cards {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    @media #{$medium-screen} {
+      flex-direction: row;
+      gap: 25px;
+    }
+  }
+  .cards {
+    flex-grow: 1;
     border: 1px solid blue;
-    
-    &.cards__image {
-      
-      img {
-        width: inherit;
-      }
+    min-width: 200px;
+    @media #{$small-screen} {
+      flex-basis: 20%;
+    }
+    &__body {
+      border: 1px solid red;
     }
   }
 }

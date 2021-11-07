@@ -14,6 +14,9 @@ h1 {
   font-family: "Shrikhand", sans-serif;
 }
 
+.container {
+  margin: 0 10px;
+}
 @media screen and (min-width: 1440px) {
   .container {
     margin: auto;
@@ -70,11 +73,13 @@ header {
 .intro {
   text-align: center;
   background-color: #fafafa;
-  padding: 25px 10px 65px 10px;
+  padding: 5px 0 60px 0;
 }
 .intro h2 {
   font-size: 30px;
   font-weight: 800;
+  margin: 15px 56px;
+  font-size: 18px;
 }
 .intro p {
   font-weight: 300;
@@ -93,7 +98,6 @@ header {
 }
 
 .manual {
-  padding: 5px;
   counter-reset: steps;
 }
 .manual h2 {
@@ -112,17 +116,17 @@ header {
     gap: 15px;
   }
 }
-.manual ol li {
+.manual li {
   flex-grow: 1;
   background-color: #f3f3f3;
   font-weight: 600;
   font-size: 16px;
   border-radius: 25px;
   padding: 16px 0;
-  margin: 15px;
+  margin: 10px;
   box-shadow: 0px 2px 2px 2px lightgray;
 }
-.manual ol li::before {
+.manual li::before {
   content: "" counter(steps);
   counter-increment: steps;
   background-color: #9356dc;
@@ -134,24 +138,46 @@ header {
   font-size: 14px;
   font-weight: 400;
 }
-.manual ol li i.fas {
+.manual li i.fas {
   color: gray;
   margin: 10px 10px;
+  font-size: 22px;
+  padding: 4px;
+}
+.manual li i.fas:hover {
+  color: #9356dc;
 }
 
 .restaurants {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
+  background-color: #f3f3f3;
 }
 .restaurants h2 {
   margin: 20px;
 }
-.restaurants__cards {
-  border: 1px solid blue;
+.restaurants__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
 }
-.restaurants__cards.cards__image img {
-  width: inherit;
+@media screen and (min-width: 992px) {
+  .restaurants__list {
+    flex-direction: row;
+    gap: 25px;
+  }
+}
+.restaurants .cards {
+  flex-grow: 1;
+  border: 1px solid blue;
+  min-width: 200px;
+}
+@media screen and (min-width: 768px) {
+  .restaurants .cards {
+    flex-basis: 20%;
+  }
+}
+.restaurants .cards__body {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */
