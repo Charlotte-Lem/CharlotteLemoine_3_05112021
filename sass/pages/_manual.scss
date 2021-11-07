@@ -1,0 +1,30 @@
+
+.manual {
+  padding: 25px;
+
+  h2 {
+    margin: 20px 0 30px 20px;
+  }
+  ol {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 0;
+    gap: 20px;
+    @media (min-width: 800px) {
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    li {
+      flex-grow: 1;
+      background-color: rgba(228, 225, 225, 0.7);
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 15px;
+      @include base-shadows;
+    }
+  }
+}

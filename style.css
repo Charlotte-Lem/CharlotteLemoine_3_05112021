@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-
 * {
   box-sizing: border-box;
 }
@@ -17,11 +16,13 @@ header {
   box-shadow: 0px 2px 2px 1px lightgray;
   position: relative;
 }
+
 #logo {
   width: 190px;
   justify-content: center;
   margin: auto;
 }
+
 /* SECTION INPUT */
 .input {
   display: flex;
@@ -30,12 +31,11 @@ header {
   background-color: #f3f3f3;
   padding: 12px 0 12px 15px;
 }
-
-.input_icon {
+.input__icon {
   font-size: 15px;
   padding: 8px 10px;
 }
-.input_location {
+.input__location {
   width: 153px;
   line-height: 35px;
   font-weight: 700;
@@ -45,41 +45,65 @@ header {
   font-family: "Roboto";
   padding-left: 8px;
 }
-
-/* SECTION INTRO */
-.input_location::placeholder {
+.input__location:placeholder {
   color: rgba(0, 0, 0, 0.631);
   font: inherit;
 }
 
+/* SECTION INTRO */
 .intro {
   text-align: center;
   background-color: #fafafa;
   padding: 25px 10px 65px 10px;
 }
-
-.intro-title {
+.intro h2 {
   font-size: 30px;
   font-weight: 800;
 }
-
-.intro-subtitle {
+.intro p {
   font-weight: 300;
   padding-bottom: 25px;
 }
-
-.intro_btn {
+.intro__btn {
   border-radius: 30px;
-  background-image: linear-gradient(
-    0deg,
-    rgba(147, 86, 220, 0.9),
-    rgba(255, 121, 218, 0.9)
-  );
-  box-shadow: 0px 2px 2px 2px lightgray;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
   font-size: 18px;
   font-weight: 400;
   color: white;
   text-decoration: none;
   padding: 20px;
+  box-shadow: 0px 2px 2px 2px lightgray;
 }
+
+.manual {
+  padding: 25px;
+}
+.manual h2 {
+  margin: 20px 0 30px 20px;
+}
+.manual ol {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding: 0;
+  gap: 20px;
+}
+@media (min-width: 800px) {
+  .manual ol {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+.manual ol li {
+  flex-grow: 1;
+  background-color: rgba(228, 225, 225, 0.7);
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0px 2px 2px 2px lightgray;
+}
+
+/*# sourceMappingURL=style.css.map */

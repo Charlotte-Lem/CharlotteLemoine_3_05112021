@@ -1,0 +1,26 @@
+/* SECTION INPUT */
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 12px 0 12px 15px;
+  &__icon {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+  &__location {
+    width: 153px;
+    line-height: 35px;
+    font-weight: 700;
+    border: none;
+    background-color: #f3f3f3;
+    font-size: 18px;
+    font-family: "Roboto";
+    padding-left: 8px;
+    &:placeholder {
+      color: rgba(0, 0, 0, 0.631);
+      font: inherit;
+    }
+  }
+}
