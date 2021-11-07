@@ -10,6 +10,22 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    margin: auto;
+    max-width: 1440px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   display: flex;
   padding: 17px 0 13px 0;
@@ -34,6 +50,7 @@ header {
 .input__icon {
   font-size: 15px;
   padding: 8px 10px;
+  color: #000000b8;
 }
 .input__location {
   width: 153px;
@@ -45,9 +62,8 @@ header {
   font-family: "Roboto";
   padding-left: 8px;
 }
-.input__location:placeholder {
-  color: rgba(0, 0, 0, 0.631);
-  font: inherit;
+.input__location::placeholder {
+  color: #000000b8;
 }
 
 /* SECTION INTRO */
@@ -68,28 +84,29 @@ header {
   border-radius: 30px;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   color: white;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px 20px;
   box-shadow: 0px 2px 2px 2px lightgray;
 }
 
 .manual {
-  padding: 25px;
+  padding: 5px;
+  counter-reset: steps;
 }
 .manual h2 {
-  margin: 20px 0 30px 20px;
+  margin: 20px;
 }
 .manual ol {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
   padding: 0;
-  gap: 20px;
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 992px) {
   .manual ol {
     flex-direction: row;
     gap: 15px;
@@ -97,13 +114,44 @@ header {
 }
 .manual ol li {
   flex-grow: 1;
-  background-color: rgba(228, 225, 225, 0.7);
+  background-color: #f3f3f3;
   font-weight: 600;
-  font-size: 18px;
-  border-radius: 20px;
-  padding: 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 16px 0;
   margin: 15px;
   box-shadow: 0px 2px 2px 2px lightgray;
+}
+.manual ol li::before {
+  content: "" counter(steps);
+  counter-increment: steps;
+  background-color: #9356dc;
+  padding: 4px 8px;
+  border-radius: 50%;
+  position: relative;
+  right: 13px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+.manual ol li i.fas {
+  color: gray;
+  margin: 10px 10px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.restaurants h2 {
+  margin: 20px;
+}
+.restaurants__cards {
+  border: 1px solid blue;
+}
+.restaurants__cards.cards__image img {
+  width: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */

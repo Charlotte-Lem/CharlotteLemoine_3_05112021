@@ -3,11 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3f3f3;
+  background-color: $color-grey;
   padding: 12px 0 12px 15px;
   &__icon {
     font-size: 15px;
     padding: 8px 10px;
+    color: #000000b8;
   }
   &__location {
     width: 153px;
@@ -18,9 +19,8 @@
     font-size: 18px;
     font-family: "Roboto";
     padding-left: 8px;
-    &:placeholder {
-      color: rgba(0, 0, 0, 0.631);
-      font: inherit;
+    &::placeholder {
+      color: #000000b8;
     }
   }
 }
