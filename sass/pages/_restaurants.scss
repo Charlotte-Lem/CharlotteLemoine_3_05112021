@@ -1,27 +1,62 @@
 .restaurants {
   background-color: $color-grey;
+  margin-top: 60px;
+  @media #{$medium-screen} {
+    border-radius: 20px;
+  }
   h2 {
-    margin: 20px;
+    padding-top: 40px;
+    margin: 30px;
   }
   &__list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 10px;
+    padding: 0 25px;
     @media #{$medium-screen} {
       flex-direction: row;
-      gap: 25px;
+      row-gap: 50px;
+      justify-content: space-around;
+    }
+    .news {
+      position: relative;
+      &::before {
+        content: "Nouveau";
+        position: absolute;
+        background-color: $color-tertiary;
+        font-size: 18px;
+        padding: 8px 12px;
+        color: scale-color($color: $color-tertiary, $lightness: -50%);
+        font-weight: 500;
+        top: 15px;
+        right: 15px;
+        border-radius: 4px;
+      }
     }
   }
   .cards {
-    flex-grow: 1;
-    border: 1px solid blue;
-    min-width: 200px;
-    @media #{$small-screen} {
-      flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    @include base-shadows;
+    @media #{$medium-screen} {
+      flex-basis: 40%;
     }
-    &__body {
-      border: 1px solid green
+    &__image {
+      min-height: 200px;
+      background-size: cover;
+    }
+    @for $i from 1 through 4 {
+      &__image-#{$i} {
+        background-image: url("../../assets/restaurants/menu-#{$i}.jpg");
+      }
+    }
+    &__body{
+      padding: 5px 10px;
+
     }
   }
 }
