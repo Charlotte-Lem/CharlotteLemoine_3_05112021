@@ -24,6 +24,12 @@ h1 {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: grab;
+}
+
+h3,
+p {
+  margin: 0;
 }
 
 header {
@@ -218,7 +224,25 @@ header {
   background-image: url("../../assets/restaurants/menu-4.jpg");
 }
 .restaurants .cards__body {
-  padding: 5px 10px;
+  position: relative;
+}
+.restaurants .cards__body h3 {
+  padding-top: 10px;
+}
+.restaurants .cards__body p {
+  margin-bottom: 20px;
+}
+.restaurants .cards__body h3,
+.restaurants .cards__body p {
+  margin: 5px 0 0 20px;
+}
+.restaurants .cards__body i {
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
