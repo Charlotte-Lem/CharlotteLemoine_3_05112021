@@ -1,0 +1,30 @@
+footer {
+  position: absolute;
+  width: 100%;
+  background-color: #000000c7;
+  color: white;
+  padding: 20px 0 40px 25px;
+
+  h2 {
+    font-family: $title-font;
+    font-weight: 500;
+  }
+
+  .end {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-top: 10px;
+    font-size: 19px;
+    .fas {
+      font-size: 14px;
+
+      &.fa-utensils {
+        margin-right: 15px;
+      }
+      &.fa-hands-helping {
+        margin-right: 9px;
+      }
+    }
+  }
+}

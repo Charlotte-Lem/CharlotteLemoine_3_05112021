@@ -45,6 +45,34 @@ header {
   margin: auto;
 }
 
+footer {
+  position: absolute;
+  width: 100%;
+  background-color: #000000c7;
+  color: white;
+  padding: 20px 0 40px 25px;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+}
+footer .end {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-top: 10px;
+  font-size: 19px;
+}
+footer .end .fas {
+  font-size: 14px;
+}
+footer .end .fas.fa-utensils {
+  margin-right: 15px;
+}
+footer .end .fas.fa-hands-helping {
+  margin-right: 9px;
+}
+
 /* SECTION INPUT */
 .input {
   display: flex;
@@ -175,7 +203,7 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
-  padding: 0 25px;
+  padding: 0 25px 60px 25px;
 }
 @media screen and (min-width: 992px) {
   .restaurants__list {
@@ -203,7 +231,7 @@ header {
   display: flex;
   flex-direction: column;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 2px 2px 2px lightgray;
 }
@@ -232,14 +260,14 @@ header {
   position: relative;
 }
 .restaurants .cards__body h3 {
-  padding-top: 10px;
+  padding: 10px 0 5px 0;
 }
 .restaurants .cards__body p {
-  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 .restaurants .cards__body h3,
 .restaurants .cards__body p {
-  margin: 10px 0 5px 20px;
+  margin-left: 10px;
 }
 .restaurants .cards__btn::before {
   font-style: normal;
