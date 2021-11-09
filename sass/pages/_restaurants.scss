@@ -12,7 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 0 25px;
     @media #{$medium-screen} {
       flex-direction: row;
@@ -46,12 +46,12 @@
       flex-basis: 40%;
     }
     &__image {
-      min-height: 200px;
+      min-height: 150px;
       background-size: cover;
     }
     @for $i from 1 through 4 {
       &__image-#{$i} {
-        background-image: url("/assets/restaurants/menu-#{$i}.jpg");
+        background-image: url("./assets/restaurants/menu-#{$i}.jpg");
       }
     }
     &__body {

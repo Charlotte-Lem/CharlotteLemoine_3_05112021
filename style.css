@@ -81,13 +81,14 @@ header {
 .intro h2 {
   font-size: 30px;
   font-weight: 800;
-  margin: 15px 56px;
+  margin: 15px 40px;
   font-size: 28px;
 }
 .intro p {
   font-weight: 300;
   padding: 10px 20px 25px;
   font-size: 16px;
+  margin-bottom: 30px;
 }
 .intro__btn {
   border-radius: 30px;
@@ -169,7 +170,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   padding: 0 25px;
 }
 @media screen and (min-width: 992px) {
@@ -208,20 +209,20 @@ header {
   }
 }
 .restaurants .cards__image {
-  min-height: 200px;
+  min-height: 150px;
   background-size: cover;
 }
 .restaurants .cards__image-1 {
-  background-image: url("../../assets/restaurants/menu-1.jpg");
+  background-image: url("./assets/restaurants/menu-1.jpg");
 }
 .restaurants .cards__image-2 {
-  background-image: url("../../assets/restaurants/menu-2.jpg");
+  background-image: url("./assets/restaurants/menu-2.jpg");
 }
 .restaurants .cards__image-3 {
-  background-image: url("../../assets/restaurants/menu-3.jpg");
+  background-image: url("./assets/restaurants/menu-3.jpg");
 }
 .restaurants .cards__image-4 {
-  background-image: url("../../assets/restaurants/menu-4.jpg");
+  background-image: url("./assets/restaurants/menu-4.jpg");
 }
 .restaurants .cards__body {
   position: relative;
