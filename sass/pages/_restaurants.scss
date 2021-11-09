@@ -56,6 +56,7 @@
     }
     &__body {
       position: relative;
+
       h3 {
         padding-top: 10px;
       }
@@ -64,15 +65,20 @@
       }
       h3,
       p {
-        margin: 5px 0 0 20px;
+        margin: 10px 0 5px 20px;
       }
-      i {
-        font-size: 30px;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
+    }
+    &__btn {
+      &::before {
+        @include heart;
+      }
+      &::after {
+        @include heart($opacity: 0, $font-weight: 900, $color: transparent);
+        @include gradient-btn(1, 180deg);
+      }
+      &:hover::after {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
       }
     }
   }
