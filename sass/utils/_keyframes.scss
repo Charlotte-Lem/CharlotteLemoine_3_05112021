@@ -1,0 +1,13 @@
+@keyframes load {
+    from {
+      visibility: visible;
+    }
+    to {
+      visibility: hidden;
+    }
+  }
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+}

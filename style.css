@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@keyframes load {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -132,6 +145,29 @@ footer .end .fas.fa-hands-helping {
 }
 .intro__btn:hover {
   transform: scale(1.05);
+}
+
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.7;
+  animation: load 200ms 3s both;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border: 4px solid #9356dc;
+  border-radius: 50%;
+  border-top: transparent;
+  animation: spinner 1s infinite ease-in-out;
 }
 
 .manual {
