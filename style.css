@@ -1,6 +1,11 @@
+@charset "UTF-8";
+/*box-shadows*/
+/*dégradé*/
+/*heart*/
+/*heart animé*/
+/*keyframes loader*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-
 @keyframes load {
   from {
     visibility: visible;
@@ -18,7 +23,8 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   margin: 0;
   min-width: 200px;
   font-family: "Roboto", sans-serif;
@@ -26,6 +32,7 @@ body {
 
 h1 {
   font-family: "Shrikhand", sans-serif;
+  font-size: 22px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -42,7 +49,9 @@ a {
 }
 
 h3,
+h4,
 p {
+  padding: 0;
   margin: 0;
 }
 
@@ -54,7 +63,7 @@ header {
 }
 
 #logo {
-  width: 190px;
+  width: 160px;
   justify-content: center;
   margin: auto;
 }
@@ -142,11 +151,7 @@ footer .end .fas.fa-hands-helping {
   padding: 15px 20px;
   border: none;
   box-shadow: 0px 2px 2px 2px lightgray;
-  background-image: linear-gradient(
-    0deg,
-    rgba(147, 86, 220, 0.9),
-    rgba(255, 121, 218, 0.9)
-  );
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .intro__btn:hover {
   transform: scale(1.05);
@@ -161,12 +166,12 @@ footer .end .fas.fa-hands-helping {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: load 200ms 3s both;
+  animation: load 100ms 3s both;
 }
 .loader::after {
   content: "";
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   border-bottom: 5px solid #9356dc;
   border-left: 5px solid #ff79da;
   border-right: 5px solid #99e2d0;
@@ -285,6 +290,7 @@ footer .end .fas.fa-hands-helping {
 .restaurants .cards__image {
   min-height: 150px;
   background-size: cover;
+  background-position: center;
 }
 .restaurants .cards__image-1 {
   background-image: url("./assets/restaurants/menu-1.jpg");
@@ -343,7 +349,6 @@ footer .end .fas.fa-hands-helping {
   position: absolute;
   right: 20px;
   top: 50%;
-
   transform: translateY(-50%);
   cursor: pointer;
   color: transparent;
@@ -356,6 +361,126 @@ footer .end .fas.fa-hands-helping {
 .restaurants .cards__btn:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
+}
+
+.images__meal img {
+  width: 100%;
+  max-height: 50vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.menu-list {
+  background-color: #f3f3f3;
+  padding: 15px 15px 60px 15px;
+  border-radius: 15px 15px 0 0;
+  position: relative;
+  top: -50px;
+}
+.menu-list h1 {
+  position: relative;
+}
+.menu-list h1::before {
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 1500ms ease-in-out;
+}
+.menu-list h1::after {
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 1500ms ease-in-out;
+  background-image: linear-gradient(180deg, #9356dc, #ff79da);
+}
+.menu-list h1:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+.menu-list h2 {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 30px 0;
+}
+
+.menu h4 {
+  padding-bottom: 5px;
+}
+.menu p {
+  font-size: 12px;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+}
+.menu__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.menu-item {
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px 2px lightgray;
+}
+.menu-item__content {
+  padding: 15px;
+}
+.menu-item__price {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 900;
+  margin: 10px 35px 10px auto;
+}
+.menu-item__check-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border-radius: 0 15px 15px 0;
+  margin-right: -70px;
+  background-color: #99e2d0;
+  transition: all 1s;
+}
+.menu-item__check-box .fas {
+  color: white;
+  font-size: 26px;
+}
+.menu-item:hover .menu-item__check-box {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

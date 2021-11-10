@@ -48,6 +48,8 @@
     &__image {
       min-height: 150px;
       background-size: cover;
+      background-position: center;
+     
     }
     @for $i from 1 through 4 {
       &__image-#{$i} {
@@ -68,17 +70,7 @@
       }
     }
     &__btn {
-      &::before {
-        @include heart;
-      }
-      &::after {
-        @include heart($opacity: 0, $font-weight: 900, $color: transparent);
-        @include gradient-btn(1, 180deg);
-      }
-      &:hover::after {
-        opacity: 1;
-        transform: translateY(-50%) scale(1.1);
-      }
+      @include heart-animation;
     }
   }
 }

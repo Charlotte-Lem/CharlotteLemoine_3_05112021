@@ -5,13 +5,15 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   margin: 0;
   min-width: 200px;
   font-family: $body-font;
 }
 h1 {
   font-family: $title-font;
+  font-size: 22px;
 }
 .container {
   @media #{$large-screen} {
@@ -25,7 +27,10 @@ a {
   color: inherit;
   cursor: grab;
 }
+
 h3,
+h4,
 p {
+  padding: 0;
   margin: 0;
 }
