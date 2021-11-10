@@ -1,3 +1,8 @@
+.menu-pages {
+  header {
+    position: initial;
+  }
+}
 .images__meal img {
   width: 100%;
   max-height: 50vh;
@@ -9,8 +14,9 @@
   background-color: $color-grey;
   padding: 15px 15px 60px 15px;
   border-radius: 15px 15px 0 0;
+  margin-top: -25px;
   position: relative;
-  top: -50px;
+
   h1 {
     position: relative;
     @include heart-animation;
@@ -18,7 +24,11 @@
   h2 {
     font-size: 16px;
     font-weight: 400;
-    padding: 30px 0;
+    padding: 20px 0;
+    @media #{$medium-screen} {
+     text-align: center;
+      
+    }
   }
 }
 .menu {
@@ -28,10 +38,16 @@
   p {
     font-size: 12px;
   }
+  h4,
+  p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
   @media #{$medium-screen} {
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 0;
   }
   &__flex {
     display: flex;
@@ -44,15 +60,15 @@
     border-radius: 15px;
     overflow: hidden;
     @include base-shadows;
-
     &__content {
-      padding: 15px;
+      padding: 15px 8px;
+      overflow: hidden;
     }
     &__price {
       display: flex;
       align-items: flex-end;
       font-weight: 900;
-      margin: 10px 35px 10px auto;
+      margin: 10px 20px 10px auto;
     }
     &__check-box {
       display: flex;
@@ -63,13 +79,19 @@
       margin-right: -70px;
       background-color: $color-tertiary;
       transition: all 1s;
+
       .fas {
         color: white;
         font-size: 26px;
       }
     }
-    &:hover .menu-item__check-box {
-      margin-right: 0;
+    &:hover {
+      .menu-item__check-box {
+        margin-right: 0;
+      }
+      .fas {
+        animation: spinner 700ms ease-in-out;
+      }
     }
   }
 }
