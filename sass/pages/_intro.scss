@@ -1,5 +1,8 @@
-/* SECTION INTRO */
-
+ /* LOADING SPINNER */
+.loader {
+  @include loader
+  }
+  /* SECTION INTRO */
 .intro {
   text-align: center;
   background-color: #fafafa;
@@ -21,26 +24,5 @@
   }
 }
 
-.loader {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: whitesmoke;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  animation: load 100ms 3s both;
-  &::after {
-    content: "";
-    height: 100px;
-    width: 100px;
-    border-bottom: 5px solid $color-primary;
-    border-left: 5px solid $color-secondary;
-    border-right: 5px solid $color-tertiary;
-    border-radius: 50%;
-    border-top: transparent;
-    @include base-shadows;
-    animation: spinner 1s infinite ease-in-out;
-  }
-}
+
+

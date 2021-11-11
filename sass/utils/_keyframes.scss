@@ -1,15 +1,16 @@
 /*keyframes loader*/
 
 @keyframes load {
-    from {
-      visibility: visible;
-    }
-    to {
-      visibility: hidden;
-    }
+  from {
+    visibility: visible;
   }
-  @keyframes spinner {
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    visibility: hidden;
+  }
+}
+/*keyframes spinner*/
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }

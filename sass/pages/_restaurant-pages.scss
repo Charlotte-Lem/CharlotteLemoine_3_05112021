@@ -1,11 +1,17 @@
 .menu-pages {
   header {
     position: initial;
+    .return {
+      cursor: pointer;
+      &::before {
+        @include arrow;
+      }
+    }
   }
 }
 .images__meal img {
   width: 100%;
-  max-height: 50vh;
+  max-height: 40vh;
   object-fit: cover;
   object-position: center;
 }
@@ -41,7 +47,6 @@
     position: relative;
     @include subtitle;
   }
-  
 }
 .menu {
   h4 {
@@ -58,13 +63,16 @@
   }
   @media #{$medium-screen} {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
   &__flex {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    @media #{$medium-screen} {
+      width: 30%;
+      gap: 35px;
+    }
   }
   &-item {
     display: flex;
@@ -72,6 +80,9 @@
     border-radius: 15px;
     overflow: hidden;
     @include base-shadows;
+    &:hover {
+      cursor: pointer;
+    }
     &__content {
       padding: 15px 8px;
       overflow: hidden;
@@ -106,14 +117,12 @@
       }
     }
   }
-  
-  
 }
-.order{
+.order {
   display: flex;
   justify-content: center;
   &__btn {
-    margin: 40px 0 20px ;
+    margin: 40px 0 20px;
     @include btn-purple;
   }
 }
