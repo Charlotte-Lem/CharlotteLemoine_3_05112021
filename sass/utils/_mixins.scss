@@ -1,8 +1,8 @@
-/*box-shadows*/
+//box-shadows
 @mixin base-shadows {
   box-shadow: 0px 2px 2px 2px lightgray;
 }
-/*dégradé*/
+//gradient purple
 @mixin gradient-btn($opacity: 0.9, $origin: 0deg) {
   background-image: linear-gradient(
     $origin,
@@ -10,7 +10,7 @@
     rgba(255, 121, 218, $opacity)
   );
 }
-/*mixin loading spinner*/
+//mixin loading spinner
 @mixin loader {
   position: fixed;
   display: flex;
@@ -34,7 +34,7 @@
     animation: spinner 1s infinite ease-in-out;
   }
 }
-/*bouton explorer et commander*/
+//btn explorer commander
 @mixin btn-purple {
   border-radius: 30px;
   cursor: pointer;
@@ -50,6 +50,7 @@
     transform: scale(1.05);
   }
 }
+//mixin icone font awesome
 @mixin font-awesome($font-weight: 400) {
   font-style: normal;
   font-variant: normal;
@@ -58,19 +59,20 @@
   font-family: "Font Awesome 5 Free";
   font-weight: $font-weight;
 }
+//mixin arrow left return homepage
 @mixin arrow {
   @include font-awesome($font-weight: 900);
   content: "\f060";
   position: relative;
   color: rgba(0, 0, 0, 0.734);
   font-size: 30px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
-/*heart*/
+//heart
 @mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
   @include font-awesome($font-weight);
   content: "\f004";
-  font-size: 30px;
+  font-size: 35px;
   position: absolute;
   right: 20px;
   top: 50%;
@@ -82,7 +84,7 @@
   opacity: $opacity;
   transition: all 1500ms ease-in-out;
 }
-/*heart animé*/
+//anime heart
 @mixin heart-animation {
   &::before {
     @include heart;
@@ -96,7 +98,7 @@
     transform: translateY(-50%) scale(1.1);
   }
 }
-/*titre souligné en vert*/
+//green subtitle
 @mixin subtitle {
   &::after {
     content: "";
