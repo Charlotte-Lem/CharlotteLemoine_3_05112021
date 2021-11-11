@@ -1,8 +1,10 @@
 @charset "UTF-8";
 /*box-shadows*/
 /*dégradé*/
+/*bouton explorer et commander*/
 /*heart*/
 /*heart animé*/
+/*titre souligné en vert*/
 /*keyframes loader*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
@@ -381,10 +383,15 @@ footer .end .fas.fa-hands-helping {
   margin-top: -25px;
   position: relative;
 }
-.menu-list h1 {
-  position: relative;
+.menu-list__title {
+  display: flex;
 }
-.menu-list h1::before {
+.menu-list .heart-place {
+  position: relative;
+  margin-left: auto;
+  padding-right: 20px;
+}
+.menu-list .heart-place::before {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -404,7 +411,7 @@ footer .end .fas.fa-hands-helping {
   opacity: 1;
   transition: all 1500ms ease-in-out;
 }
-.menu-list h1::after {
+.menu-list .heart-place::after {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -425,19 +432,34 @@ footer .end .fas.fa-hands-helping {
   transition: all 1500ms ease-in-out;
   background-image: linear-gradient(180deg, #9356dc, #ff79da);
 }
-.menu-list h1:hover::after {
+.menu-list .heart-place:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
+}
+.menu-list h1 {
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .menu-list h1 {
+    text-align: center;
+    font-size: 30px;
+  }
 }
 .menu-list h2 {
   font-size: 16px;
   font-weight: 400;
-  padding: 20px 0;
+  padding-top: 25px;
+  margin: 0;
+  position: relative;
 }
-@media screen and (min-width: 992px) {
-  .menu-list h2 {
-    text-align: center;
-  }
+.menu-list h2::after {
+  content: "";
+  position: absolute;
+  top: 49px;
+  left: 0px;
+  height: 4px;
+  width: 37px;
+  background-color: #99e2d0;
 }
 
 .menu h4 {
@@ -500,6 +522,27 @@ footer .end .fas.fa-hands-helping {
 }
 .menu-item:hover .fas {
   animation: spinner 700ms ease-in-out;
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+}
+.order__btn {
+  margin: 40px 0 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  border: none;
+  box-shadow: 0px 2px 2px 2px lightgray;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+.order__btn:hover {
+  transform: scale(1.05);
 }
 
 /*# sourceMappingURL=style.css.map */

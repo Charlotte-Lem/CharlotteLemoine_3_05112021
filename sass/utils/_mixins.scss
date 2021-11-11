@@ -10,6 +10,25 @@
     rgba(255, 121, 218, $opacity)
   );
 }
+/*bouton explorer et commander*/
+@mixin btn-purple {
+  border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    border: none;
+    @include base-shadows;
+    @include gradient-btn;
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+}
+
+
 /*heart*/
 @mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
   font-style: normal;
@@ -44,4 +63,17 @@
     opacity: 1;
     transform: translateY(-50%) scale(1.1);
   }
+}
+/*titre souligné en vert*/
+@mixin subtitle {
+  &::after{
+    content: "";
+    position: absolute;
+    top: 49px;
+    left: 0px;
+    height: 4px;
+    width: 37px;
+    background-color: $color-tertiary;
+  }
+  
 }
