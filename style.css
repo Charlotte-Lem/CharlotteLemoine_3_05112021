@@ -13,6 +13,16 @@
     transform: rotate(360deg);
   }
 }
+@keyframes appear {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -491,9 +501,19 @@ footer .end .fas.fa-hands-helping {
   }
 }
 .menu__flex {
+  animation: appear 1000ms ease-in-out both;
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+.menu__flex:nth-child(1) {
+  animation-delay: 800ms;
+}
+.menu__flex:nth-child(2) {
+  animation-delay: 1600ms;
+}
+.menu__flex:nth-child(3) {
+  animation-delay: 2400ms;
 }
 @media screen and (min-width: 992px) {
   .menu__flex {

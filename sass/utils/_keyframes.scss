@@ -14,3 +14,20 @@
     transform: rotate(360deg);
   }
 }
+
+//keyframes appear
+
+@keyframes appear {
+  0% {
+    
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+100% {
+  
+    transform: translateY(0px);
+    opacity: 1;
+}
+  
+}

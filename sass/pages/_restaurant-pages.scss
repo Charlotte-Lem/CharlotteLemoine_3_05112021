@@ -50,6 +50,7 @@
   }
 }
 .menu {
+  
   h4 {
     padding-bottom: 5px;
   }
@@ -67,15 +68,17 @@
     justify-content: space-around;
   }
   &__flex {
+   @include appear-menu;
     display: flex;
     flex-direction: column;
     gap: 25px;
+    
     @media #{$medium-screen} {
       width: 30%;
       gap: 35px;
     }
   }
-  &-item {
+  &-item { 
     display: flex;
     background-color: white;
     border-radius: 15px;

@@ -110,3 +110,20 @@
     background-color: $color-tertiary;
   }
 }
+//picture menu page
+@mixin menu-pictures{
+  @for $i from 1 through 4 {
+    &__image-#{$i} {
+      background-image: url("./assets/restaurants/menu-#{$i}.jpg");
+    }
+}
+}
+//appear menu flex
+@mixin appear-menu{
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})
+   { animation-delay: 800ms*$i;
+    }
+  }
+  animation: appear 1000ms ease-in-out both;
+}
