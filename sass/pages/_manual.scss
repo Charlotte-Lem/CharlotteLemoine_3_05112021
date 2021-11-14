@@ -37,14 +37,19 @@
     padding: 16px 0;
     margin: 10px;
     @include base-shadows;
-    & i.fas {
-      color: gray;
-      margin: 10px 10px;
-      font-size: 22px;
-      padding: 4px;
-      &:hover {
+    &:hover {
+      @include zoom;
+      background-color: lighten($color-primary, 30%);
+      i::before {
         color: $color-primary;
       }
     }
   }
+  & i.fas {
+    color: darken($color-grey,50%);
+    margin: 10px 10px;
+    font-size: 20px;
+    padding: 4px;
+  }
 }
+

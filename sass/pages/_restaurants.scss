@@ -43,7 +43,10 @@
     overflow: hidden;
     @include base-shadows;
     @media #{$medium-screen} {
-      flex-basis: 40%;
+      flex-basis: 45%;
+    }
+    &:hover{
+     @include zoom;
     }
     &__image {
       min-height: 150px;

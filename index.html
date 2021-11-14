@@ -25,7 +25,7 @@
       sizes="16x16"
       href="././assets/favicon/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     <title>Oh My Food</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -35,7 +35,7 @@
       <img id="logo" src="assets/logo/ohmyfood.png" alt="logo" />
     </header>
 
-    <section class="input">
+    <div class="input">
       <i class="input__icon fas fa-map-marker-alt"></i>
       <input
         class="input__location"
@@ -43,12 +43,11 @@
         id="city"
         placeholder="Paris, Belleville"
       />
-    </section>
+    </div>
     <section class="intro">
       <h2>Réservez le menu qui vous convient</h2>
       <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-      <button class="intro__btn">Explorer nos restaurants</button>
-      <!-- __btn à voir si mettre dans un a href? -->
+      <a href="#explore-link" class="intro__btn">Explorer nos restaurants</a>
     </section>
     <main class="container">
       <section class="manual">
@@ -68,7 +67,7 @@
         </ol>
       </section>
       <section class="restaurants">
-        <h2>Restaurants</h2>
+        <h2 id="explore-link">Restaurants</h2>
         <div class="restaurants__list">
           <a href="./pages/La-palette-du-goût.html" class="cards news">
             <div class="cards__image cards__image-1"></div>
@@ -110,8 +109,14 @@
     <footer>
       <h2>ohmyfood</h2>
       <div class="end">
-        <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
-        <a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+        <a href="#"
+          ><i class="fas fa-utensils"></i>
+          <span>Proposer un restaurant</span></a
+        >
+        <a href="#"
+          ><i class="fas fa-hands-helping"></i>
+          <span>Devenir partenaire</span></a
+        >
         <a href="#">Mentions légales</a>
         <a href="mailto:#">Contact</a>
       </div>

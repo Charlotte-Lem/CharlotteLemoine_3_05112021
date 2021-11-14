@@ -36,7 +36,7 @@ html {
 
 h1 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 @media screen and (min-width: 1440px) {
@@ -49,7 +49,7 @@ h1 {
 a {
   text-decoration: none;
   color: inherit;
-  cursor: grab;
+  cursor: pointer;
 }
 
 h3,
@@ -67,7 +67,7 @@ header {
 }
 
 #logo {
-  width: 220px;
+  width: 190px;
   justify-content: center;
   margin: auto;
 }
@@ -83,12 +83,28 @@ footer h2 {
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
 }
+@media screen and (min-width: 992px) {
+  footer h2 {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
 footer .end {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
   padding-top: 10px;
   font-size: 19px;
+}
+footer .end span {
+  font-weight: 700;
+}
+@media screen and (min-width: 992px) {
+  footer .end {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
 }
 footer .end .fas {
   font-size: 14px;
@@ -148,7 +164,7 @@ footer .end .fas.fa-hands-helping {
   border-right: 5px solid #99e2d0;
   border-radius: 50%;
   border-top: transparent;
-  box-shadow: 0px 2px 2px 2px lightgray;
+  box-shadow: 0px 2px 2px 2px lightgrey;
   animation: spinner 1s infinite ease-in-out;
 }
 
@@ -172,18 +188,19 @@ footer .end .fas.fa-hands-helping {
 }
 .intro__btn {
   border-radius: 30px;
-  cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: white;
   text-decoration: none;
   padding: 15px 20px;
   border: none;
-  box-shadow: 0px 2px 2px 2px lightgray;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 2px 2px 2px lightgrey;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
 }
 .intro__btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.85), rgba(255, 121, 218, 0.85));
 }
 
 .manual {
@@ -213,7 +230,7 @@ footer .end .fas.fa-hands-helping {
   border-radius: 25px;
   padding: 16px 0;
   margin: 10px;
-  box-shadow: 0px 2px 2px 2px lightgray;
+  box-shadow: 0px 2px 2px 2px lightgrey;
 }
 .manual li::before {
   content: "" counter(steps);
@@ -227,14 +244,19 @@ footer .end .fas.fa-hands-helping {
   font-size: 14px;
   font-weight: 400;
 }
-.manual li i.fas {
-  color: gray;
-  margin: 10px 10px;
-  font-size: 22px;
-  padding: 4px;
+.manual li:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
+  background-color: #e4d5f6;
 }
-.manual li i.fas:hover {
+.manual li:hover i::before {
   color: #9356dc;
+}
+.manual i.fas {
+  color: #747474;
+  margin: 10px 10px;
+  font-size: 20px;
+  padding: 4px;
 }
 
 .restaurants {
@@ -285,12 +307,16 @@ footer .end .fas.fa-hands-helping {
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 2px 2px 2px lightgray;
+  box-shadow: 0px 2px 2px 2px lightgrey;
 }
 @media screen and (min-width: 992px) {
   .restaurants .cards {
-    flex-basis: 40%;
+    flex-basis: 45%;
   }
+}
+.restaurants .cards:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
 }
 .restaurants .cards__image {
   min-height: 150px;
@@ -371,8 +397,9 @@ footer .end .fas.fa-hands-helping {
 .menu-pages header {
   position: initial;
 }
-.menu-pages header .return {
-  cursor: pointer;
+.menu-pages header .return:hover {
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
 }
 .menu-pages header .return::before {
   font-style: normal;
@@ -526,7 +553,7 @@ footer .end .fas.fa-hands-helping {
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 2px 2px 2px lightgray;
+  box-shadow: 0px 2px 2px 2px lightgrey;
 }
 .menu-item:hover {
   cursor: pointer;
@@ -567,20 +594,21 @@ footer .end .fas.fa-hands-helping {
   justify-content: center;
 }
 .order__btn {
-  margin: 40px 0 20px;
+  margin: 60px 0 20px;
   border-radius: 30px;
-  cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: white;
   text-decoration: none;
   padding: 15px 20px;
   border: none;
-  box-shadow: 0px 2px 2px 2px lightgray;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0px 2px 2px 2px lightgrey;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
 }
 .order__btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.85), rgba(255, 121, 218, 0.85));
 }
 
 /*# sourceMappingURL=style.css.map */
