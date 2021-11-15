@@ -1,7 +1,4 @@
- /* LOADING SPINNER */
-.loader {
-  @include loader
-  }
+ 
   /* SECTION INTRO */
 .intro {
   text-align: center;
@@ -20,7 +17,7 @@
     margin-bottom: 30px;
   }
   &__btn {
-    @include btn-purple
+    @include btn-purple;  
   }
 }
 

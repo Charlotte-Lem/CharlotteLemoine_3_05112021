@@ -116,6 +116,30 @@ footer .end .fas.fa-hands-helping {
   margin-right: 9px;
 }
 
+/* LOADING SPINNER */
+.loader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.99;
+  animation: load 100ms 3s both;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-bottom: 5px solid #9356dc;
+  border-left: 5px solid #ff79da;
+  border-right: 5px solid #99e2d0;
+  border-radius: 50%;
+  border-top: transparent;
+  animation: spinner 1s infinite ease-in-out;
+}
+
 /* SECTION INPUT */
 .input {
   display: flex;
@@ -141,31 +165,6 @@ footer .end .fas.fa-hands-helping {
 }
 .input__location::placeholder {
   color: #000000b8;
-}
-
-/* LOADING SPINNER */
-.loader {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: whitesmoke;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.95;
-  animation: load 100ms 3s both;
-}
-.loader::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-bottom: 5px solid #9356dc;
-  border-left: 5px solid #ff79da;
-  border-right: 5px solid #99e2d0;
-  border-radius: 50%;
-  border-top: transparent;
-  box-shadow: 0px 2px 2px 2px lightgrey;
-  animation: spinner 1s infinite ease-in-out;
 }
 
 /* SECTION INTRO */
@@ -194,13 +193,14 @@ footer .end .fas.fa-hands-helping {
   text-decoration: none;
   padding: 15px 20px;
   border: none;
-  box-shadow: 0px 2px 2px 2px lightgrey;
+  box-shadow: 0px 4px 2px 2px lightgrey;
   background-image: linear-gradient(0deg, #9356dc, #ff79da);
 }
 .intro__btn:hover {
-  transform: scale(1.03);
-  transition: all 200ms ease-in-out;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.85), rgba(255, 121, 218, 0.85));
+}
+.intro__btn:hover:hover {
+  box-shadow: 0px 4px 2px 2px #a0a0a0;
 }
 
 .manual {
@@ -230,7 +230,7 @@ footer .end .fas.fa-hands-helping {
   border-radius: 25px;
   padding: 16px 0;
   margin: 10px;
-  box-shadow: 0px 2px 2px 2px lightgrey;
+  box-shadow: 0px 4px 2px 2px lightgrey;
 }
 .manual li::before {
   content: "" counter(steps);
@@ -246,7 +246,7 @@ footer .end .fas.fa-hands-helping {
 }
 .manual li:hover {
   transform: scale(1.03);
-  transition: all 200ms ease-in-out;
+  transition: all 400ms ease-in-out;
   background-color: #e4d5f6;
 }
 .manual li:hover i::before {
@@ -307,7 +307,7 @@ footer .end .fas.fa-hands-helping {
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 2px 2px 2px lightgrey;
+  box-shadow: 0px 4px 2px 2px lightgrey;
 }
 @media screen and (min-width: 992px) {
   .restaurants .cards {
@@ -316,7 +316,7 @@ footer .end .fas.fa-hands-helping {
 }
 .restaurants .cards:hover {
   transform: scale(1.03);
-  transition: all 200ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .restaurants .cards__image {
   min-height: 150px;
@@ -399,7 +399,7 @@ footer .end .fas.fa-hands-helping {
 }
 .menu-pages header .return:hover {
   transform: scale(1.03);
-  transition: all 200ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 .menu-pages header .return::before {
   font-style: normal;
@@ -553,7 +553,7 @@ footer .end .fas.fa-hands-helping {
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 2px 2px 2px lightgrey;
+  box-shadow: 0px 4px 2px 2px lightgrey;
 }
 .menu-item:hover {
   cursor: pointer;
@@ -602,13 +602,14 @@ footer .end .fas.fa-hands-helping {
   text-decoration: none;
   padding: 15px 20px;
   border: none;
-  box-shadow: 0px 2px 2px 2px lightgrey;
+  box-shadow: 0px 4px 2px 2px lightgrey;
   background-image: linear-gradient(0deg, #9356dc, #ff79da);
 }
 .order__btn:hover {
-  transform: scale(1.03);
-  transition: all 200ms ease-in-out;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.85), rgba(255, 121, 218, 0.85));
+}
+.order__btn:hover:hover {
+  box-shadow: 0px 4px 2px 2px #a0a0a0;
 }
 
 /*# sourceMappingURL=style.css.map */
