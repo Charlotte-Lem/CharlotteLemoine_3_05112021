@@ -1,5 +1,4 @@
- 
-  /* SECTION INTRO */
+/* SECTION INTRO */
 .intro {
   text-align: center;
   background-color: #fafafa;
@@ -17,9 +16,6 @@
     margin-bottom: 30px;
   }
   &__btn {
-    @include btn-purple;  
+    @include btn-purple;
   }
 }
-
-
-

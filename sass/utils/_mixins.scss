@@ -3,9 +3,7 @@
   box-shadow: 0px 4px 2px 2px $color;
 }
 @mixin base-shadows-hov {
-  
-    box-shadow: 0px 4px 2px 2px darken($color: lightgrey, $amount: 20%);
-  
+  box-shadow: 0px 4px 2px 2px darken($color: lightgrey, $amount: 20%);
 }
 //zoom scale
 @mixin zoom {
@@ -55,8 +53,8 @@
   border: none;
   @include base-shadows;
   @include gradient-btn;
- 
-  &:hover { 
+
+  &:hover {
     @include base-shadows-hov;
     @include zoom;
     @include gradient-btn($opacity: 0.85, $origin: 0deg);
